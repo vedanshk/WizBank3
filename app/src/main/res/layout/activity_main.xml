@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:background="@drawable/background_toolbar"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/bottomNavView"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_toolbar"
+        app:menu="@menu/bottom_nav_menu"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbAddTransaction"
+        android:src="@drawable/ic_add"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        app:fabCustomSize="50dp"
+        android:layout_marginBottom="78dp" />
+
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_below="@+id/toolbar"
+       >
+       <androidx.core.widget.NestedScrollView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/firstRelLayout"
+                   >
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Welcome to Wiz Bank"
+                       android:textStyle="bold"
+                       android:textSize="20sp"
+                       />
+                   <TextView
+                       android:id="@+id/txtAmount"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="0.0 $"
+                       android:layout_alignParentEnd="true"
+                       android:textColor="@color/green"
+                       android:layout_marginRight="10dp"
+                       android:textStyle="bold"
+                       android:textSize="20sp"
+                       />
+               </RelativeLayout>
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/chartRelLayout"
+                   android:layout_below="@id/firstRelLayout"
+                   android:layout_marginTop="10dp">
+
+                   
+               </RelativeLayout>
+
+           </RelativeLayout>
+
+       </androidx.core.widget.NestedScrollView>
+
+   </RelativeLayout>
+
+
+</RelativeLayout>

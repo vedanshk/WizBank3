@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Wiz Bank</string>
+    <string name="license">Develped By Vedansh at WizCode.org</string>
+    <string name="already_account">Have an account? login from here</string>
+    <string name="warning">Warning</string>
+    <string name="register">Register</string>
+    <string name="address">Address</string>
+    <string name="name">Name</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="register_new_account">Register new Account</string>
+    <string name="login">Login</string>
+</resources>
