@@ -249,7 +249,7 @@ public class RegisterActivity extends AppCompatActivity {
                 Toast.makeText(RegisterActivity.this, user.getEmail() +" registered successfully", Toast.LENGTH_SHORT).show();
                 Utils utils = new Utils(RegisterActivity.this);
                 utils.addUserToSharedPreferences(user);
-                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }else{

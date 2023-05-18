@@ -52,18 +52,20 @@
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Welcome to Wiz Bank"
+                       android:text="@string/welcome_to_wiz_bank"
                        android:textStyle="bold"
                        android:textSize="20sp"
+                       android:id="@+id/welcome"
                        />
                    <TextView
                        android:id="@+id/txtAmount"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="0.0 $"
+                       android:layout_toEndOf="@+id/welcome"
                        android:layout_alignParentEnd="true"
                        android:textColor="@color/green"
-                       android:layout_marginRight="10dp"
+                       android:layout_marginEnd="10dp"
                        android:textStyle="bold"
                        android:textSize="20sp"
                        />
@@ -75,9 +77,37 @@
                    android:id="@+id/chartRelLayout"
                    android:layout_below="@id/firstRelLayout"
                    android:layout_marginTop="10dp">
+                   <com.github.mikephil.charting.charts.LineChart
+                       android:id="@+id/lineChart"
+                       android:layout_width="150dp"
+                       android:layout_height="150dp"
+                       />
+                   <com.github.mikephil.charting.charts.BarChart
+                       android:id="@+id/barChart"
+                       android:layout_width="150dp"
+                       android:layout_height="150dp"
+                       android:layout_toEndOf="@id/lineChart"
+                       android:layout_alignParentEnd="true"
+                       android:layout_marginEnd="20dp"
+                       />
 
-                   
                </RelativeLayout>
+           <RelativeLayout
+               android:layout_width="@dimen/material_emphasis_medium"
+               android:layout_height="wrap_content"
+               android:id="@+id/transactionRelLayout"
+               android:layout_below="@id/chartRelLayout"
+               android:layout_marginTop="10dp">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/transactions"
+                   android:id="@+id/txtTransactions"
+                   android:textStyle="bold"
+                   android:textSize="16sp"
+                   android:layout_marginTop="10dp"/>
+
+           </RelativeLayout>
 
            </RelativeLayout>
 
